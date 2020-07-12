@@ -30,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="contactus.html"> <span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>         
                 <span class="navbar-text">
-                    <a href="" data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton" role="button">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -158,7 +158,7 @@
                     <img src="img/logo.png" alt="" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a href="" class="btn nav-link btn-warning btn-block" data-toggle="modal" data-target="#reserveTableModal" >Reserve Table</a>
+                    <a id="reserveButton" class="btn nav-link btn-warning btn-block"  >Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -385,21 +385,16 @@
                     // $("#carouselButton").addClass('btn-danger');                    
                 }
             });
+            $('#reserveButton').click(function(){
+                 $('#reserveTableModal').modal('show');
+            });
+
+            $('#loginButton').click(function(){
+                $('#loginModal').modal('show');
+            }); 
+            
         });
     </script>
-    <!-- second option to go about it  -->
-    <!-- <script>
-        $('#mycarousel').carousel({
-            interval: 1500,
-            pause: false
-        });
-        $('#carousel-pause').click(function() {
-            $('#mycarousel').carousel('pause');
-        });
-        $('#carousel-play').click(function() {
-            $('#mycarousel').carousel('cycle');
-        });
-    </script> -->
 </body>
 
 </html>
